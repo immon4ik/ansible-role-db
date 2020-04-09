@@ -8,18 +8,18 @@
       become: True
       changed_when: False
 
-- name: Converge
-  become: true
-  hosts: localhost
+# - name: Converge
+#   become: true
+#   hosts: localhost
 
-  vars:
-    mongo_bind_ip: 0.0.0.0
+#   vars:
+#     mongo_bind_ip: 0.0.0.0
 
-  # roles:
-  #   - role: db
+#   # roles:
+#   #   - role: db
 
-  tasks:
-    - import_tasks: tasks/main.yml
+#   tasks:
+#     - import_tasks: tasks/main.yml
   
-  handlers:
-    - include: handlers/main.yml
+#   handlers:
+#     - include: handlers/main.yml
