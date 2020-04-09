@@ -15,8 +15,11 @@
   vars:
     mongo_bind_ip: 0.0.0.0
 
+  # roles:
+  #   - role: db
+
   tasks:
     - import_tasks: tasks/main.yml
   
   handlers:
-    - import_tasks: handlers/main.yml
+    - include: handlers/main.yml
