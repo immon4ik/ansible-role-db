@@ -3,7 +3,7 @@ dependency:
   name: galaxy
 driver:
   name: gce
-lint:
+lint: |
   name: yamllint
 platforms:
   - name: instance-travis
