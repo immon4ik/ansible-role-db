@@ -5,3 +5,4 @@
 service_account.json
 google_compute_engine
 api_key.py
+.vscode/
