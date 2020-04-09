@@ -19,4 +19,4 @@
     - import_tasks: tasks/main.yml
   
   handlers:
-    - import_tasks: hadlers/main.yml
+    - import_tasks: handlers/main.yml
