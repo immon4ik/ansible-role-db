@@ -16,7 +16,7 @@
     mongo_bind_ip: 0.0.0.0
 
   tasks:
-    - main.yml
+    - import_tasks: main.yml
   
   handlers:
-    - main.yml
+    - import_tasks: main.yml
