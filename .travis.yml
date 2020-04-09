@@ -2,7 +2,7 @@ language: python
 python:
 - '3.6'
 install:
-- pip install ansible==2.9.6 molecule molecule-gce apache-libcloud
+- pip install ansible==2.9.6 molecule molecule-gce testinfra apache-libcloud
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/service_account.json"
