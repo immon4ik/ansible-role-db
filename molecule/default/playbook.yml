@@ -1,6 +1,6 @@
 ---
 - name: Converge
-  hosts: all
+  hosts: localhost
   gather_facts: False
   tasks:
     - name: Install python for Ansible
@@ -10,10 +10,10 @@
 
 - name: Converge
   become: true
-  hosts: all
+  hosts: localhost
 
   vars:
     mongo_bind_ip: 0.0.0.0
 
-  roles:
-    - role: db-role-example
+  # roles:
+  #   - role: db
