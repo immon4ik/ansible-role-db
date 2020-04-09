@@ -2,7 +2,7 @@ language: python
 python:
 - '3.6'
 install:
-- pip install ansible==2.9.6 molecule molecule-gce apache-libcloud
+- pip install ansible==2.3.0 molecule molecule-gce apache-libcloud
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/service_account.json"
@@ -23,3 +23,7 @@ before_install:
 - tar xvf secrets.tar
 - mv google_compute_engine /home/travis/.ssh/
 - chmod 0600 /home/travis/.ssh/google_compute_engine
+notifications:
+  slack:
+    rooms:
+      secure: E+jeRRS1p21EZqOINlG0L7FhoJfBl9jwUixB6S4zC2C2FNwEkmB5c3iA/5jGnHw1J13ny7inu4vVSzYxsx7nRpnPXzxkJu870D+eBhO6KPSBFwOT27VyF7oNyssEzZvYy2piGdviypScfZl65Z2pHs1BQ8j75itDnwXoAAYfUpDkMhmDFqMu+s9k4Mh5KuAgjZsS/V5arW5J6Y8szmZAvKKfMtKw/dZbmVZP6btTcDiN0awfZA48K3lO6M2bS78XtaJeB9EBOIcisbXtMSSxx2ZK/OgfGJrNh4KADbUTrxOOPbhouwVZhPhHK1V5E2Ffvgp9gMoY5cUG4qB9COyiBiXQNAh4gzUSGLW772qHWYy734iVr1gpTf+HbFdUItwFRTxjp1AYiLjKkblo6aDzf6rBVYztOTt+dOEx3wq4b7Tz/0No8VD+AvyMRhCpTmZwXHvDgVW+g2sbY/iDmq/Dt9HDv06nmVyNQT9ZIWEIEwyd3lCFofWyEs2rUzxAfdKQ+o+YQuJYUzamL5Qg+lN4nNb0M0092331/LuZjRDS6t/PKtzs1kcRnH0F8e8tkxkglyI9IhWqgeX11da9ewZyKkXXovX4oL44AUpuTbghapk1yL46HFF/Qx7kr2H2DIibH6+c1i7Lo9ZE2xcfO3/xDMoNlGZgj6F6dCyPPxE4n30=
